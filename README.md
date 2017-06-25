@@ -30,6 +30,6 @@ $ docker run -it --rm the-bot:latest
 
 Aaaand done. Updates on this shortly.
 
-Also, please, 
+Also, please, don't do anything illegal or something.
 
 
