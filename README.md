@@ -30,6 +30,6 @@ $ docker run -it --rm the-bot:latest
 
 Aaaand done. Updates on this shortly.
 
-Also, please, don't do anything illegal or something.
+Also, please, don't do anything illegal or something. Please read the [Twitter Developer Agreement](https://dev.twitter.com/overview/terms/agreement-and-policy).
 
 
