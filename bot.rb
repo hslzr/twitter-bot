@@ -7,24 +7,19 @@
 require 'bundler'
 Bundler.require(:default)
 
-# Sets api access keys
-CONSUMER_KEY = "XXXXXXXXXXXXXX".freeze
-CONSUMER_SECRET = "XXXXXXXXXXXXXXX".freeze
-ACCESS_TOKEN = "XXXXXXXXXXXXX".freeze
-ACCESS_TOKEN_SECRET = "XXXXXXXXXXXXXXXX".freeze
-
 # Setup a Twitter client
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key = CONSUMER_KEY
-  config.consumer_secret = CONSUMER_SECRET
-  config.access_token = ACCESS_TOKEN
-  config.access_token_secret = ACCESS_TOKEN_SECRET
+  config.consumer_key = ENV['CONSUMER_KEY']
+  config.consumer_secret = ENV['CONSUMER_SECRET']
+  config.access_token = ENV['ACCESS_TOKEN']
+  config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
 end
 
 sample_tweets = [
-  'Probando desde la terminal.',
-  'Tuit enviado desde mi bot.',
-  'Probando, probando, uno, dos...'
+  'Tweet number one',
+  'Tweet number two',
+  'Tweet number three',
+  '...'
 ].freeze
 
 scheduler = Rufus::Scheduler.new
