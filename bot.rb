@@ -24,7 +24,8 @@ sample_tweets = [
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.every '1h' do
+# Every hour, first run in 10 seconds from now
+scheduler.every '1h', first_in: Time.now + 10 do
 
   puts "Starting scheduler for every hour"
   tuit = sample_tweets.sample
