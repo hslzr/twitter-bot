@@ -23,11 +23,11 @@ sample_tweets = [
 ].freeze
 
 scheduler = Rufus::Scheduler.new
+puts "Starting scheduler for every hour".green
 
 # Every hour, first run in 10 seconds from now
 scheduler.every '1h', first_in: Time.now + 10 do
 
-  puts "Starting scheduler for every hour"
   tuit = sample_tweets.sample
 
   puts "tweeting..."
