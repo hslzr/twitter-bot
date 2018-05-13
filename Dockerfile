@@ -1,12 +1,11 @@
 FROM ruby:2.5.1-slim
-LABEL maintainer "Héctor Salazar <hector@hslzr.com>"
+LABEL maintainer "Salazar <salazar@hslzr.com>"
 
-RUN apt-get update
-RUN apt-get install build-essential -y --no-install-recommends
+RUN apt-get -qqq update && apt-get -qqq install build-essential -y --no-install-recommends
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/bot
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/bot
 
 COPY Gemfile .
 COPY Gemfile.lock .

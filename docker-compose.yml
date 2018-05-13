@@ -6,4 +6,4 @@ services:
     container_name: bot
     env_file: .env
     volumes:
-      - .:/usr/src/app
+      - .:/usr/src/bot

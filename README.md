@@ -2,9 +2,14 @@
 
 Real, real simple.
 
-## How to setup
+## Setup
 
-You need to [create a twitter app](https://apps.twitter.com/) and setup your consumer/access tokens in the **Keys and Access Tokens** section. Add those keys in the **bot.rb** file and you're ready to go.
+1. [create a twitter app](https://apps.twitter.com/)
+2. Setup your consumer/access tokens in the **Keys and Access Tokens** section.
+3. Add those keys in the `.env.example` file and rename it to `.env`
+4. Build the project running `docker-compose build`.
+5. ???
+6. Profit
 
 Install docker in order to run it as a docker container, or just run it locally
 
@@ -15,17 +20,6 @@ $ bundle install
 # ...
 
 $ ruby bot.rb
-```
-
-### Running as a docker container
-
-```shell
-# Build your image with whatever name you choose
-# In this example, 'the-bot'
-$ docker build -t the-bot:latest .
-
-# Run it
-$ docker run -it --rm the-bot:latest
 ```
 
 Aaaand done. Updates on this shortly.
