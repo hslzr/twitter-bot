@@ -1,9 +1,0 @@
-version: "2"
-
-services:
-  bot:
-    build: .
-    container_name: bot
-    env_file: .env
-    volumes:
-      - .:/usr/src/app
